@@ -1,0 +1,43 @@
+.bookmark {
+    --default: #d1d6ee;
+    --active: #f74236;
+    --size: 64px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.bookmark svg {
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    fill: var(--fill, var(--default));
+    transition: fill 0.3s linear;
+    transform: translateZ(0);
+}
+.bookmark.active {
+    --fill: var(--active);
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+* {
+    box-sizing: inherit;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Inter', Arial;
+    justify-content: center;
+    align-items: center;
+    background: #f6f8ff;
+}
+
